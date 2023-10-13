@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pizza Cheff" />
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Pizza</title>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <a href="./index.html" class="header__logo">
+        <img src="./images/pizza_logo.png" alt="logo" class="icon">
+        <span>Pizza cheff</span>
+      </a>
+
+      <nav class="header__menu">
+        <a href="#" class="link">Пиццы</a>
+        <a href="#" class="link">Напитки</a>
+        <a href="#" class="link">Доставка и оплата</a>
+        <a href="#" class="link">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-js">
+    <div class="content">
+      <div class="container">
+        <h1 class="promoPizzaHeading">
+          Самая вкусная пицца в мире
+          <span>только в Pizza Cheff</span>
+        </h1>
+      </div>
+
+      <div class="promoPizza container">
+        <div class="promoPizza__info">
+          <div class="divider"></div>
+
+          <div class="advantages">
+            <div class="advantages__item">
+              <div class="advantages__icon">
+                <img src="./images/icon_1.png" alt="icon" class="image icon">
+              </div>
+              <div class="wrapper">
+                <p class="advantages__title">Лучшее тесто</p>
+                <p class="advantages__text">Мы создаем тесто только из  отборной итальянской муки наивысшего качества</p>
+              </div>
+            </div>
+
+            <div class="advantages__item">
+              <div class="advantages__icon">
+                <img src="./images/icon_2.png" alt="icon" class="image icon">
+              </div>
+              <div class="wrapper">
+                <p class="advantages__title">Лучшие повара</p>
+                <p class="advantages__text">Пиццы готовят самые профессиональные итальянские повара</p>
+              </div>
+            </div>
+
+            <div class="advantages__item">
+              <div class="advantages__icon">
+                <img src="./images/icon_3.png" alt="icon" class="image icon">
+              </div>
+              <div class="wrapper">
+                <p class="advantages__title">Гарантия качества</p>
+                <p class="advantages__text">Наша пиццерия получила множество наград и признаний по всему миру</p>
+              </div>
+            </div>
+
+            <div class="advantages__item">
+              <div class="advantages__icon">
+                <img src="./images/icon_4.png" alt="icon" class="image icon">
+              </div>
+              <div class="wrapper">
+                <p class="advantages__title">Отборные рецепты</p>
+                <p class="advantages__text">Мы используем рецепты от мировых лидеров в изготовлении пиццы</p>
+              </div>
+            </div>
+          </div>
+
+          <button id="select-btn-js" class="promoPizza__button commonBtn" type="button">Выбрать пиццу</button>
+        </div>
+
+        <div class="promoPizza__image">
+          <img src="./images/pizza_big.png" alt="image" class="image">
+        </div>
+      </div>
+
+      <h2 id="products-js" class="selectPizzaHeading">Выберите свою любимую пиццу</h2>
+
+      <ul class="productList container">
+        <li class="productList__card">
+          <a data-fslightbox="lightbox-1" href="./images/product_1.png" class="productList__image">
+            <img src="./images/product_1.png" alt="image" class="image">
+          </a>
+          <p class="productList__title">Мясная Делюкс</p>
+          <p class="productList__composition">Пепперони, лук, бекон, томатная паста, колбаски, перец, грибы, соус чили, ананасы</p>
+          <button id="buy-btn-js" class="productList__button commonBtn" type="button">В корзину</button>
+        </li>
+
+        <li class="productList__card">
+          <a data-fslightbox="lightbox-2" href="./images/product_2.png" class="productList__image">
+            <img src="./images/product_2.png" alt="image" class="image">
+          </a>
+          <p class="productList__title">Морская Премиум</p>
+          <p class="productList__composition">Перец, сыр, креветки, кальмары, мидии, лосось</p>
+          <button id="buy-btn-js" class="productList__button commonBtn" type="button">В корзину</button>
+        </li>
+
+        <li class="productList__card">
+          <a data-fslightbox="lightbox-3" href="./images/product_3.png" class="productList__image">
+            <img src="./images/product_3.png" alt="image" class="image">
+          </a>
+          <p class="productList__title">Бекон и Сосиски</p>
+          <p class="productList__composition">Бекон, сыр, сосиски, ананас, томатная паста</p>
+          <button id="buy-btn-js" class="productList__button commonBtn" type="button">В корзину</button>
+        </li>
+
+        <li class="productList__card">
+          <a data-fslightbox="lightbox-4" href="./images/product_4.png" class="productList__image">
+            <img src="./images/product_4.png" alt="image" class="image">
+          </a>
+          <p class="productList__title">Куриная Делюкс</p>
+          <p class="productList__composition">Курица, ананас, сыр Пепперони, соус для пиццы, томатная паста</p>
+          <button id="buy-btn-js" class="productList__button commonBtn" type="button">В корзину</button>
+        </li>
+
+        <li class="productList__card">
+          <a data-fslightbox="lightbox-5" href="./images/product_5.png" class="productList__image">
+            <img src="./images/product_5.png" alt="image" class="image">
+          </a>
+          <p class="productList__title">Барбекю Премиум</p>
+          <p class="productList__composition">Свинина BBQ, соус Барбкею, сыр, курица, соус для пиццы, соус чили</p>
+          <button id="buy-btn-js" class="productList__button commonBtn" type="button">В корзину</button>
+        </li>
+
+        <li class="productList__card">
+          <a data-fslightbox="lightbox-6" href="./images/product_6.png" class="productList__image">
+            <img src="./images/product_6.png" alt="image" class="image">
+          </a>
+          <p class="productList__title">Пепперони Дабл</p>
+          <p class="productList__composition">Пепперони, сыр, колбаса 2 видов: обжаренная и вареная</p>
+          <button id="buy-btn-js" class="productList__button commonBtn" type="button">В корзину</button>
+        </li>
+
+        <li class="productList__card">
+          <a data-fslightbox="lightbox-7" href="./images/product_7.png" class="productList__image">
+            <img src="./images/product_7.png" alt="image" class="image">
+          </a>
+          <p class="productList__title">Куриное трио</p>
+          <p class="productList__composition">Жареная курица, Тушеная курица, Куриные наггетсы, перец, сыр, грибы, соус для пиццы</p>
+          <button id="buy-btn-js" class="productList__button commonBtn" type="button">В корзину</button>
+        </li>
+
+        <li class="productList__card">
+          <a data-fslightbox="lightbox-8" href="./images/product_8.png" class="productList__image">
+            <img src="./images/product_8.png" alt="image" class="image">
+          </a>
+          <p class="productList__title">Сырная</p>
+          <p class="productList__composition">Сыр Джюгас, Сыр с плесенью, Сыр Моцарелла, Сыр секретный</p>
+          <button id="buy-btn-js" class="productList__button commonBtn" type="button">В корзину</button>
+        </li>
+      </ul>
+
+      <div class="checkoutWrapper">
+        <div id="checkout-js" class="checkout container">
+          <div class="checkout__info">
+            <h3 class="checkout__heading">
+              Хватит думать!
+              <span>Доставим заказ за 30 минут!</span>
+            </h3>
+            <p class="checkout__text">
+              Мы гарантированно доставим вашу пиццу за 30 минут с момента оформления заказа.
+              Если мы опоздаем даже на 1 минуту - вы получаете весь заказ бесплатно и ваучер на скидку на следуюший заказ.
+              Мы гордися нашим сервисом и сделаем всё, чтобы наш клиент был доволен и не остался голодный!
+            </p>
+          </div>
+
+          <form id="form-checkout" action="#" class="checkout__form">
+            <input
+              type="text"
+              name="name"
+              autocomplete="on"
+              placeholder="Ваше имя"
+              required
+              pattern="[A-Za-zА-Яа-яЁё\- s]+"
+              maxlength="30"
+              class="checkout__field field"
+            />
+            <input
+              type="adress"
+              name="adress"
+              autocomplete="on"
+              placeholder="Адрес доставки"
+              required
+              pattern="[A-Za-zА-Яа-яЁё0-9\-. s]+"
+              maxlength="60"
+              class="checkout__field field"
+            />
+            <input
+              type="tel"
+              name="tel"
+              autocomplete="on"
+              placeholder="Телефон"
+              required
+              pattern="[0-9\-\(\)+ s]+"
+              maxlength="20"
+              class="checkout__field field"
+            />
+            <button id="submit-btn-js" class="checkout__button commonBtn" type="submit">Оформить заказ</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer"></footer>
+
+  <script src="./scripts/fslightbox.js"></script>
+  <script src="./scripts/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,558 @@
+@-webkit-keyframes showPopup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes showPopup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input,
+button,
+span,
+label,
+li,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: inherit;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  -webkit-transition: background-color 600000s 0s, color 600000s 0s;
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+a {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+body {
+  line-height: initial;
+  font-family: "Muller", sans-serif;
+  background-color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.commonBtn {
+  padding: 10px;
+  border: 2px solid #ffaf18;
+  outline: none;
+  background-color: #ffaf18;
+  color: #382400;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.commonBtn:hover {
+  background-color: transparent;
+}
+
+.mainPopup {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 89vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: showPopup 0.5s ease-in-out 1 both;
+          animation: showPopup 0.5s ease-in-out 1 both;
+}
+.mainPopup .text {
+  padding: 25px 30px;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1254901961);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1254901961);
+  background-color: #FFF;
+  color: #ffaf18;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.header {
+  min-height: 100px;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1254901961);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1254901961);
+}
+.header .container {
+  min-height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 245px;
+}
+.header .header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-family: "Muller Black";
+  color: #ffc468;
+}
+.header .header__logo .icon {
+  width: 70px;
+  height: 70px;
+}
+.header .header__logo span {
+  max-width: 80px;
+  color: inherit;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.header .header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+}
+.header .header__menu .link {
+  color: #a46b00;
+  font-size: 16px;
+  text-decoration: none;
+}
+.header .header__menu .link:hover {
+  opacity: 0.8;
+}
+
+.promoPizzaHeading {
+  max-width: 625px;
+  margin-top: 130px;
+  color: #b99050;
+  font-size: 45px;
+  font-weight: 800;
+  line-height: 53px;
+}
+.promoPizzaHeading span {
+  color: #ffaf18;
+}
+
+.promoPizza {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+.promoPizza .promoPizza__info {
+  width: 625px;
+}
+.promoPizza .promoPizza__info .divider {
+  height: 50px;
+}
+.promoPizza .promoPizza__info .advantages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 37px;
+}
+.promoPizza .promoPizza__info .advantages .advantages__item {
+  font-size: 16px;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+.promoPizza .promoPizza__info .advantages .advantages__item .wrapper {
+  max-width: 205px;
+}
+.promoPizza .promoPizza__info .advantages .advantages__title {
+  margin-bottom: 8px;
+  color: #ffaf18;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.promoPizza .promoPizza__info .advantages .advantages__text {
+  color: #b99150;
+}
+.promoPizza .promoPizza__button {
+  width: 220px;
+  height: 58px;
+  margin-top: 60px;
+}
+.promoPizza .promoPizza__image {
+  margin-bottom: 15px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.promoPizza .promoPizza__image:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.selectPizzaHeading {
+  margin-top: 160px;
+  margin-bottom: 60px;
+  text-align: center;
+  color: #b99050;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.productList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 24px;
+  list-style-type: none;
+}
+.productList .productList__card {
+  width: 280px;
+  min-height: 350px;
+  padding: 15px 20px;
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1254901961);
+          box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1254901961);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 19px;
+  color: #382400;
+}
+.productList .productList__image {
+  text-decoration: none;
+}
+.productList .productList__image:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.productList .productList__title {
+  font-size: 18px;
+  font-weight: 600;
+}
+.productList .productList__composition {
+  color: #181a1a;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+.productList .productList__button {
+  width: 100%;
+  height: 48px;
+}
+
+.checkoutWrapper {
+  position: relative;
+  max-width: 1430px;
+  margin: 0 auto;
+  padding-top: 230px;
+  background-image: url("../images/pizza_bottom.png");
+  background-repeat: no-repeat;
+  background-position: 100% 124%;
+}
+
+.checkout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 125px;
+}
+.checkout .checkout__info {
+  width: 385px;
+}
+.checkout .checkout__heading {
+  margin-bottom: 70px;
+  color: #ffaf18;
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 45px;
+}
+.checkout .checkout__heading span {
+  color: #b99050;
+}
+.checkout .checkout__text {
+  color: #b99150;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+}
+.checkout .checkout__form {
+  width: 330px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  gap: 25px;
+}
+.checkout .checkout__form .field {
+  width: 100%;
+  height: 60px;
+  border: 1px solid #b99150;
+  outline: none;
+  background: transparent;
+  padding: 20px 22px;
+  color: #b99150;
+  font-size: 18px;
+  font-weight: 400;
+}
+.checkout .checkout__form .field::-webkit-input-placeholder {
+  color: #b99150;
+}
+.checkout .checkout__form .field::-moz-placeholder {
+  color: #b99150;
+}
+.checkout .checkout__form .field:-ms-input-placeholder {
+  color: #b99150;
+}
+.checkout .checkout__form .field::-ms-input-placeholder {
+  color: #b99150;
+}
+.checkout .checkout__form .field::placeholder {
+  color: #b99150;
+}
+.checkout .checkout__form .checkout__button {
+  width: 100%;
+  height: 60px;
+}
+.checkout .checkout__form .checkout__button_cursor_err {
+  cursor: not-allowed;
+}
+.checkout .checkout__form .checkout__button_cursor_load {
+  cursor: wait;
+}
+
+.footer {
+  height: 100px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 30px;
+  }
+  .header .container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 20px;
+  }
+  .promoPizza .promoPizza__image:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .checkoutWrapper {
+    background: none;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+  .promoPizza {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .promoPizza .promoPizza__info {
+    width: 100%;
+  }
+  .promoPizza .promoPizza__info .divider {
+    height: 0;
+  }
+  .promoPizza .promoPizza__info .advantages {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .promoPizza .promoPizza__button {
+    display: block;
+    margin: auto;
+    margin-top: 60px;
+  }
+  .promoPizza .promoPizza__image {
+    width: 350px;
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+  .checkout {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 70px;
+  }
+  .checkout .checkout__heading {
+    margin-bottom: 20px;
+  }
+  .checkout .checkout__form {
+    -ms-flex-item-align: auto;
+        align-self: auto;
+  }
+}
+@media (max-width: 425px) {
+  .container {
+    padding: 0 10px;
+  }
+  .header .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header .header__menu {
+    gap: 14px;
+  }
+  .header .header__menu .link {
+    font-size: 15px;
+  }
+  .promoPizzaHeading {
+    margin-top: 100px;
+    font-size: 28px;
+    line-height: 35px;
+  }
+  .promoPizza .promoPizza__image {
+    width: 300px;
+    margin-top: 30px;
+  }
+  .selectPizzaHeading {
+    margin-top: 150px;
+    margin-bottom: 50px;
+    font-size: 24px;
+  }
+  .checkout .checkout__info, .checkout .checkout__form {
+    width: 320px;
+  }
+  .checkout .checkout__heading {
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/MullerLight.eot");
+  src: local("Muller Light"), local("MullerLight"), url("../fonts/MullerLight.eot?#iefix") format("embedded-opentype"), url("../fonts/MullerLight.woff2") format("woff2"), url("../fonts/MullerLight.woff") format("woff"), url("../fonts/MullerLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/MullerRegular.eot");
+  src: local("Muller Regular"), local("MullerRegular"), url("../fonts/MullerRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MullerRegular.woff2") format("woff2"), url("../fonts/MullerRegular.woff") format("woff"), url("../fonts/MullerRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/MullerMedium.eot");
+  src: local("Muller Medium"), local("MullerMedium"), url("../fonts/MullerMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/MullerMedium.woff2") format("woff2"), url("../fonts/MullerMedium.woff") format("woff"), url("../fonts/MullerMedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/MullerBold.eot");
+  src: local("Muller Bold"), local("MullerBold"), url("../fonts/MullerBold.eot?#iefix") format("embedded-opentype"), url("../fonts/MullerBold.woff2") format("woff2"), url("../fonts/MullerBold.woff") format("woff"), url("../fonts/MullerBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/MullerExtraBold.eot");
+  src: local("Muller ExtraBold"), local("MullerExtraBold"), url("../fonts/MullerExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/MullerExtraBold.woff2") format("woff2"), url("../fonts/MullerExtraBold.woff") format("woff"), url("../fonts/MullerExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/MullerBlack.eot");
+  src: local("Muller Black"), local("MullerBlack"), url("../fonts/MullerBlack.eot?#iefix") format("embedded-opentype"), url("../fonts/MullerBlack.woff2") format("woff2"), url("../fonts/MullerBlack.woff") format("woff"), url("../fonts/MullerBlack.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}/*# sourceMappingURL=style.css.map */

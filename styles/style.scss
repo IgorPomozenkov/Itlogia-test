@@ -1,0 +1,484 @@
+@import './variables';
+
+@keyframes showPopup {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input,
+button,
+span,
+label,
+li,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: inherit;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+a {
+  transition: all .2s;
+}
+
+body {
+  line-height: initial;
+  font-family: 'Muller', sans-serif;
+  background-color: $bodyColor;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  position: relative;
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.commonBtn {
+  padding: 10px;
+  border: 2px solid $mainColor;
+  outline: none;
+  background-color: $mainColor;
+  color: $textBlackColor;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all .2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.mainPopup {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 89vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: showPopup .5s ease-in-out 1 both;
+
+  .text {
+    padding: 25px 30px;
+    box-shadow: 0px 0px 15px #00000020;
+    background-color: $bodyColor;
+    color: $mainColor;
+    font-size: 23px;
+    font-weight: 700;
+  }
+}
+
+.header {
+  min-height: 100px;
+  box-shadow: 0px 0px 20px #00000020;
+
+  .container {
+    min-height: inherit;
+    display: flex;
+    align-items: center;
+    gap: 245px;
+  }
+
+  .header__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-family: 'Muller Black';
+    color: $logoColor;
+
+    .icon {
+      width: 70px;
+      height: 70px;
+    }
+
+    span {
+      max-width: 80px;
+      color: inherit;
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+  }
+
+  .header__menu {
+    display: flex;
+    gap: 50px;
+
+    .link {
+      color: $textMenuColor;
+      font-size: 16px;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.promoPizzaHeading {
+  max-width: 625px;
+  margin-top: 130px;
+  //margin-bottom: 50px;
+  color: $textHeadingColor;
+  font-size: 45px;
+  font-weight: 800;
+  line-height: 53px;
+
+  span {
+    color: $mainColor;
+  }
+}
+
+.promoPizza {
+  //margin-top: 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+
+  .promoPizza__info {
+    width: 625px;
+
+    .divider {
+      height: 50px;
+    }
+
+    .advantages {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 37px;
+
+      .advantages__item {
+        font-size: 16px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .wrapper {
+          max-width: 205px;
+        }
+      }
+
+      // .advantages__icon {
+
+      // }
+
+      .advantages__title {
+        margin-bottom: 8px;
+        color: $mainColor;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .advantages__text {
+        color: $textColor;
+      }
+    }
+  }
+
+  .promoPizza__button {
+    width: 220px;
+    height: 58px;
+    margin-top: 60px;
+  }
+
+  .promoPizza__image {
+    margin-bottom: 15px;
+    transition: all .3s;
+    user-select: none;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.selectPizzaHeading {
+  margin-top: 160px;
+  margin-bottom: 60px;
+  text-align: center;
+  color: $textHeadingColor;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  list-style-type: none;
+
+  .productList__card {
+    width: 280px;
+    min-height: 350px;
+    padding: 15px 20px;
+    box-shadow: 0px 3px 15px #00000020;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 19px;
+    color: $textBlackColor;
+  }
+
+  .productList__image {
+    text-decoration: none;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .productList__title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .productList__composition {
+    color: $textProductColor;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .productList__button {
+    width: 100%;
+    height: 48px;
+  }
+}
+
+.checkoutWrapper {
+  position: relative;
+  max-width: 1430px;
+  margin: 0 auto;
+  //margin-top: 30px;
+  padding-top: 230px;
+  background-image: url('../images/pizza_bottom.png');
+  background-repeat: no-repeat;
+  background-position: 100% 124%;
+}
+
+.checkout {
+  display: flex;
+  align-items: center;
+  //flex-wrap: wrap;
+  gap: 125px;
+
+  .checkout__info {
+    width: 385px;
+  }
+
+  .checkout__heading {
+    margin-bottom: 70px;
+    color: $mainColor;
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 45px;
+
+    span {
+      color: $textHeadingColor;
+    }
+  }
+
+  .checkout__text {
+    color: $textColor;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+  }
+
+  .checkout__form {
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    gap: 25px;
+
+    .field {
+      width: 100%;
+      height: 60px;
+      border: 1px solid $textColor;
+      outline: none;
+      background: transparent;
+      padding: 20px 22px;
+      color: $textColor;
+      font-size: 18px;
+      font-weight: 400;
+
+      &::placeholder {
+        color: $textColor;
+      }
+    }
+
+    .checkout__button {
+      width: 100%;
+      height: 60px;
+    }
+
+    .checkout__button_cursor_err {
+      cursor: not-allowed;
+    }
+
+    .checkout__button_cursor_load {
+      cursor: wait;
+    }
+  }
+}
+
+// .checkoutBackground {
+//   position: absolute;
+//   bottom: 0;
+//   right: 0;
+// }
+
+.footer {
+  height: 100px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .header .container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .promoPizza .promoPizza__image:hover {
+    transform: scale(1.1);
+  }
+
+  .checkoutWrapper {
+    background: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .promoPizza {
+    flex-direction: column-reverse;
+  }
+
+  .promoPizza .promoPizza__info {
+    width: 100%;
+  }
+
+  .promoPizza .promoPizza__info .divider {
+    height: 0;
+  }
+
+  .promoPizza .promoPizza__info .advantages {
+    justify-content: center;
+  }
+
+  .promoPizza .promoPizza__button {
+    display: block;
+    margin: auto;
+    margin-top: 60px;
+  }
+
+  .promoPizza .promoPizza__image {
+    width: 350px;
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+
+  .checkout {
+    flex-direction: column;
+    gap: 70px;
+  }
+
+  .checkout .checkout__heading {
+    margin-bottom: 20px;
+  }
+
+  .checkout .checkout__form {
+    align-self: auto;
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .header .container {
+    justify-content: center;
+  }
+
+  .header .header__menu {
+    gap: 14px;
+  }
+
+  .header .header__menu .link {
+    font-size: 15px;
+  }
+
+  .promoPizzaHeading {
+    margin-top: 100px;
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  .promoPizza .promoPizza__image {
+    width: 300px;
+    margin-top: 30px;
+  }
+
+  .selectPizzaHeading {
+    margin-top: 150px;
+    margin-bottom: 50px;
+    font-size: 24px;
+  }
+
+  .checkout .checkout__info, .checkout .checkout__form {
+    width: 320px;
+  }
+
+  .checkout .checkout__heading {
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+@import './font';
